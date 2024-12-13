@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "snabbdom": "^3.6.2"
+  },
+  "name": "snabbdom-tests",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.13.2"
+  }
+}
