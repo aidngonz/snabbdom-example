@@ -1,6 +1,7 @@
 import { h } from 'snabbdom'; 
 import { init } from 'snabbdom';
 import { eventListenersModule } from 'snabbdom/./build/modules/eventlisteners.js';
+import { header } from './components/Header.js';
 
 const patch = init([eventListenersModule]);
 
@@ -9,6 +10,7 @@ let vnode;
 
 function render() {
   newVnode = h('div', {}, [
+    header(),
     h('p', {}, `Count: ${count}`),
     h('button', { on: { click: inc } }, "Click me")
   ]);

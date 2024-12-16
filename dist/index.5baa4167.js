@@ -598,6 +598,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"igcvL":[function(require,module,exports,__globalThis) {
 var _snabbdom = require("snabbdom");
 var _eventlistenersJs = require("snabbdom/./build/modules/eventlisteners.js");
+var _headerJs = require("./components/Header.js");
 const patch = (0, _snabbdom.init)([
     (0, _eventlistenersJs.eventListenersModule)
 ]);
@@ -605,6 +606,7 @@ let count = 0;
 let vnode;
 function render() {
     newVnode = (0, _snabbdom.h)('div', {}, [
+        (0, _headerJs.header)(),
         (0, _snabbdom.h)('p', {}, `Count: ${count}`),
         (0, _snabbdom.h)('button', {
             on: {
@@ -621,10 +623,8 @@ function inc() {
 const app = document.getElementById('app');
 vnode = patch(app, (0, _snabbdom.h)('div', {}));
 render();
-console.log('App element:', app);
-console.log('VNode:', vnode);
 
-},{"snabbdom":"Rkydo","snabbdom/./build/modules/eventlisteners.js":"hZwdS"}],"Rkydo":[function(require,module,exports,__globalThis) {
+},{"snabbdom":"Rkydo","snabbdom/./build/modules/eventlisteners.js":"hZwdS","./components/Header.js":"kKyxu"}],"Rkydo":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "htmlDomApi", ()=>(0, _htmldomapiJs.htmlDomApi));
@@ -1251,6 +1251,24 @@ const eventListenersModule = {
     destroy: updateEventListeners
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["eCF1U","igcvL"], "igcvL", "parcelRequire94c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kKyxu":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "header", ()=>header);
+var _snabbdom = require("snabbdom");
+var _eventlistenersJs = require("snabbdom/./build/modules/eventlisteners.js");
+const patch = (0, _snabbdom.init)([
+    (0, _eventlistenersJs.eventListenersModule)
+]);
+let vnode;
+function header() {
+    return (0, _snabbdom.h)('div', {}, [
+        (0, _snabbdom.h)('h1', {}, "Home"),
+        (0, _snabbdom.h)('h1', {}, "About"),
+        (0, _snabbdom.h)('h1', {}, "Contact")
+    ]);
+}
+
+},{"snabbdom":"Rkydo","snabbdom/./build/modules/eventlisteners.js":"hZwdS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["eCF1U","igcvL"], "igcvL", "parcelRequire94c2")
 
 //# sourceMappingURL=index.5baa4167.js.map
